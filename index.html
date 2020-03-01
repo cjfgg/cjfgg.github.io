@@ -61,6 +61,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Java多态的使用场景" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/01/Java%E5%A4%9A%E6%80%81%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" class="article-date">
+  <time datetime="2020-03-01T02:47:28.000Z" itemprop="datePublished">2020-03-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/01/Java%E5%A4%9A%E6%80%81%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">Java多态的使用场景</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="个人看法："><a href="#个人看法：" class="headerlink" title="个人看法："></a>个人看法：</h2><p>多态是Java语言的特点，多态即意味着父类引用子类对象的向下转型。使用多态的前提条件是，该类是一个父类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Animal an = <span class="keyword">new</span> Cat();         <span class="comment">//父类引用指向子类对象，这就是向下转型的例子</span></span><br></pre></td></tr></table></figure>
+
+<p>多态的编译看左，运行看右。意思是程序在未启动前an会被当成是Animal类型的对象，在运行时会被当成是Cat类型的对象，可以使用Cat类中的成员方法。</p>
+<h2 id="多态的使用场景1："><a href="#多态的使用场景1：" class="headerlink" title="多态的使用场景1："></a>多态的使用场景1：</h2><p><img src="D:%5Cmyblog%5Cblog%5Csource_posts%5Cimage%5Cduotai1.png" alt=""></p>
+<p>当有许多子类时，要想实现方法的功能，就得写多个方法，方法接收的参数不同，就得写一个新的方法，这样就显得代码非常的笨重，所以使用多态就可以让代码变得简洁明朗。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p><img src="D:%5Cmyblog%5Cblog%5Csource_posts%5Cimage%5Cduotai2.png" alt=""></p>
+<p>用父类型的形参接收数据，这样父类型的形参可以接收其任意子类对象。但是程序在运行时依然会把an当成是子类对象。第一个showAnimal方法，cat是一个Cat类型的对象，父类型的形参接收了cat对象，an此时就是cat。</p>
+<p>第二个showAnimal方法，an接收了dog，an此时就变成dog了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/01/Java%E5%A4%9A%E6%80%81%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" data-id="ck78hot2s0001qwnp69271i3m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-HTML" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/23/HTML/" class="article-date">
@@ -112,7 +157,7 @@
 colunm-gap:        列之间的间隔</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">##JS：</span><br></pre></td></tr></table></figure>
 <p><sctipt type="text/javascript"></script>     //连接内部js样式</p>
 <script src="xxxx.js"></script>              //连接外部js样式
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">文档输出：&lt;br&gt;</span><br><span class="line">	`document.write(&quot;&quot;);`</span><br><span class="line"></span><br><span class="line">定义函数：&lt;br&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">文档输出：&lt;br&gt;</span><br><span class="line">	`document.write(&quot;&quot;);`</span><br><span class="line"></span><br><span class="line">定义函数：&lt;br&gt;</span><br></pre></td></tr></table></figure>
 <pre><code>function 函数名（参数）{
     函数体；
 }
@@ -130,7 +175,7 @@ colunm-gap:        列之间的间隔</code></pre><figure class="highlight plain
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/23/HTML/" data-id="ck3ayndkf00006wnp2p48ez75" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/23/HTML/" data-id="ck78hot2w0002qwnpfage7ije" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +224,7 @@ colunm-gap:        列之间的间隔</code></pre><figure class="highlight plain
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/23/hello-world/" data-id="ck3axgzhu000028npf6m4axzx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/23/hello-world/" data-id="ck78hot2z0003qwnpdwr6a9v9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -207,7 +252,7 @@ colunm-gap:        列之间的间隔</code></pre><figure class="highlight plain
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
     </div>
   </div>
 
@@ -218,6 +263,10 @@ colunm-gap:        列之间的间隔</code></pre><figure class="highlight plain
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/01/Java%E5%A4%9A%E6%80%81%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">Java多态的使用场景</a>
+          </li>
         
           <li>
             <a href="/2019/11/23/HTML/">HTML</a>
@@ -239,7 +288,7 @@ colunm-gap:        列之间的间隔</code></pre><figure class="highlight plain
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
+      &copy; 2020 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
